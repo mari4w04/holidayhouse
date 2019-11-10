@@ -10,7 +10,7 @@
 <body>
     <nav class="">
         <div class="nav-left">
-            <a href="login"><img class="logo" src="images/logo.svg"></a>
+            <a href="login"><img class="logo" src="images/logo.png"></a>
         </div>
        <div class="nav-right">
             <a class="nav-login" href="login">Log in</a>
