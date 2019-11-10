@@ -29,10 +29,13 @@ require_once __DIR__.'/top.php';
                     <option value="accommodatesMore">3+</option>
                 </select>
             </div>
-        <div>
-        <label for="">Family Friendly</label>
-        <input id="familyFriendly" name="bFamilyFriendly" type="checkbox">
-        </div>
+            <div class="family-friendly">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+                <div class="checkbox-title">Family Friendly</div>
+            </div>
         </div>
     </div>
 
@@ -40,25 +43,40 @@ require_once __DIR__.'/top.php';
         <h3 class="post-titles">Amenities</h3>
         <div class="col-2 post-content">
             <div class="checkbox">
-                <label for="">Amenity 1</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 2</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 3</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 4</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 5</label>
-                <input name="" type="checkbox">
-            </div>
+                    <div class="checkbox-title">Amenity 1</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="bFamilyFriendly">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <div class="checkbox-title">Amenity 2</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="bFamilyFriendly">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <div class="checkbox-title">Amenity 3</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="bFamilyFriendly">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <div class="checkbox-title">Amenity 4</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="bFamilyFriendly">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <div class="checkbox-title">Amenity 5</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="bFamilyFriendly">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                </div>
         </div>
     </div> 
     <div class="row">
@@ -76,24 +94,46 @@ require_once __DIR__.'/top.php';
         <h3 class="post-titles">House Rules</h3>
         <div class="col-2 post-content">
             <div class="checkbox">
-                <label for="">Rule 1</label>
-                <input name="" type="checkbox">
+                <div class="checkbox-title">Rule 1</div>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
             </div>
             <div class="checkbox">
-                <label for="">Rule 2</label>
-                <input name="" type="checkbox">
+                <div class="checkbox-title">Rule 2</div>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
             </div>
             <div class="checkbox">
-                <label for="">Rule 3</label>
-                <input name="" type="checkbox">
+                <div class="checkbox-title">Rule 3</div>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
             </div>
             <div class="checkbox">
-                <label for="">Rule 4</label>
-                <input name="" type="checkbox">
+                <div class="checkbox-title">Rule 4</div>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
             </div>
             <div class="checkbox">
-                <label for="">Rule 5</label>
-                <input name="" type="checkbox">
+                <div class="checkbox-title">Rule 5</div>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <div class="checkbox-title">Rule 6</div>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
             </div>
         </div>
     </div>  
@@ -102,12 +142,14 @@ require_once __DIR__.'/top.php';
         <div class="post-content post-price">
             <label for="">400 DKK/night is a recommended price for your area</label>
                 <div class="price-input">
-                <input id="iPriceNight" name="iPriceNight" type="text" placeholder="Price per night" value="">
+                <input id="iPriceNight" name="iPriceNight" type="text" placeholder="" value="">
                 <div class="currency">DKK</div>
             </div>
         </div>
     </div>       
-        <button class="btn post-titles">Continue</button>
+        <div class="row">
+            <button class="btn post-content">Continue</button>
+        </div>
             </form>
 
 

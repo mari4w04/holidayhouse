@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #3a3a3a;
+    font-weight: 300;
 }
 
 nav {
@@ -98,8 +99,6 @@ form {
 
 input[type="text"],
 input[type="password"] {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
     display: grid;
     -webkit-appearance: none;
     outline: none;
@@ -159,12 +158,11 @@ h3.post-titles {
     padding: 1em 0em 1em 0em;
     grid-template-columns: 1fr 3fr;
     grid-template-areas: 'ttl cnt';
+    align-content: flex-start;
 }
 
 div.post-titles {
     grid-area: ttl;
-    /* align-items: center;
-    display: grid; */
 }
 
 .post-content {
@@ -174,7 +172,8 @@ div.post-titles {
 .home-type .post-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 2em 0em 2em 0em;
+    height: 80%;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .col-2 {
@@ -189,16 +188,26 @@ div.post-titles {
     align-self: center;
     margin-bottom: 0;
     padding-bottom: 0;
+    height: 100%;
 }
 
 .price-input {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.price-input input {
+    border-top: #cccccc solid 1px;
+    border-left: #cccccc solid 1px;
+    margin-bottom: 0;
+    padding: 1em;
 }
 
 .currency {
     color: white;
     padding: 1.2em;
+    height: 100%;
     background-color: #ff9100;
     align-self: center;
     text-align: center;
@@ -209,6 +218,9 @@ div.post-titles {
     margin: 1em 0em 1em 0em;
     display: flex;
     align-content: center;
+    height: 70%;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px !important;
 }
 
 select {
@@ -218,4 +230,52 @@ select {
     width: 100%;
     align-self: center;
     justify-content: center;
+    color: #3a3a3a;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    margin: 1em;
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.family-friendly {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: flex-end;
+}
+
+
+
+/* Styling Checkbox */
+.checkbox-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    height: 24px;
+    width: 24px;
+}
+
+.checkbox-label .checkbox-custom {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #cccccc;
+}
+
+
+.checkbox-label input:checked~.checkbox-custom {
+    background-color: #ff9100;
+    opacity: 1;
+    border: 2px solid #cccccc;
 }
