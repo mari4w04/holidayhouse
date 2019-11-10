@@ -10,7 +10,7 @@
 <body>
     <nav class="">
         <div class="left-nav">
-            <a href="login"><img class="logo" src="images/doggo-loggo.svg"></a>
+            <a href="login"><img class="logo" src="images/logo.svg"></a>
             <a href="search"><img src="images/search.svg" class="small-icon">Search for dog sitters</a>
         </div>
         <div class="right-nav">
