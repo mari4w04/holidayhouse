@@ -29,72 +29,70 @@ require_once __DIR__.'/top.php';
                     <option value="accommodatesMore">3+</option>
                 </select>
             </div>
-        <div>
-        <label for="">Family Friendly</label>
-        <input id="familyFriendly" name="bFamilyFriendly" type="checkbox">
-        </div>
+            <div class="family-friendly">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="bFamilyFriendly">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+                <div class="checkbox-title">Family Friendly</div>
+            </div>
         </div>
     </div>
 
     <div class="row">
         <h3 class="post-titles">Amenities</h3>
         <div class="col-2 post-content">
-            <div class="checkbox">
-                <label for="">Amenity 1</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 2</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 3</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 4</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Amenity 5</label>
-                <input name="" type="checkbox">
-            </div>
+            <?php 
+                    require_once __DIR__.'/connect.php';
+                    $stmt = $db->prepare('SELECT * FROM amenities');
+                    $stmt->execute();
+                    $aRows = $stmt->fetchAll();
+                    foreach ($aRows as $jRow) {
+                        echo '<div class="checkbox">
+                                <div class="checkbox-title">'.$jRow->amenity_name.'</div>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom rectangular"></span>
+                                </label>
+                            </div>';
+                    }
+                ?>
         </div>
     </div> 
     <div class="row">
         <h3 class="post-titles">Cancellation</h3>
         <div class="select-css">
-        <select>
-            <option value="apartment">7 days prior</option>
-            <option value="house">72 hours prior</option>
-            <option value="villa">48 hours prior</option>
-            <option value="condo">24 hours prior</option>
+        <select name="txtCancellation">
+            <?php 
+                require_once __DIR__.'/connect.php';
+                $stmt = $db->prepare('SELECT * FROM cancellation_descriptions');
+                $stmt->execute();
+                $aRows = $stmt->fetchAll();
+                foreach ($aRows as $jRow) {
+                    echo '<option value="'.$jRow->cancellation_description.'">'.$jRow->cancellation_description.'</option>';
+                }
+            ?>
         </select>
         </div>
     </div>     
     <div class="row">
         <h3 class="post-titles">House Rules</h3>
         <div class="col-2 post-content">
-            <div class="checkbox">
-                <label for="">Rule 1</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Rule 2</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Rule 3</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Rule 4</label>
-                <input name="" type="checkbox">
-            </div>
-            <div class="checkbox">
-                <label for="">Rule 5</label>
-                <input name="" type="checkbox">
-            </div>
+            <?php 
+                require_once __DIR__.'/connect.php';
+                $stmt = $db->prepare('SELECT * FROM rules');
+                $stmt->execute();
+                $aRows = $stmt->fetchAll();
+                foreach ($aRows as $jRow) {
+                    echo '<div class="checkbox">
+                            <div class="checkbox-title">'.$jRow->rule_name.'</div>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span class="checkbox-custom rectangular"></span>
+                            </label>
+                        </div>';
+                }
+            ?>
         </div>
     </div>  
     <div class="row">
@@ -102,12 +100,14 @@ require_once __DIR__.'/top.php';
         <div class="post-content post-price">
             <label for="">400 DKK/night is a recommended price for your area</label>
                 <div class="price-input">
-                <input id="iPriceNight" name="iPriceNight" type="text" placeholder="Price per night" value="">
+                <input id="iPriceNight" name="txtPriceNight" type="text" placeholder="" value="">
                 <div class="currency">DKK</div>
             </div>
         </div>
     </div>       
-        <button class="btn post-titles">Continue</button>
+        <div class="row">
+            <button class="btn post-content">Continue</button>
+        </div>
             </form>
 
 
