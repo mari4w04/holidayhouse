@@ -16,3 +16,5 @@
         <div class="nav-right">
             <a class="nav-login" href="login">Log in</a>
             <a class="nav-signup" href="signup">Sign up</a>
+        </div>
+    </nav>
