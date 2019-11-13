@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Holiday House</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3b2912fa62.js" crossorigin="anonymous"></script>
+    <?php echo $sInjectCss ?? ''; ?>
 </head>
 <body>
     <nav class="">

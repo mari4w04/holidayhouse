@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+}
+.page {
+    padding: 5% 5% 5% 5%;
+}
+hr{
+    background-color:#acb0b4;
+}
+p {
+    color: #4a525f;
+    font-size: 13px;
+}
+h2 {
+    font-weight: 500;
+    font-size: 2em;
+    color: #4a525f;
+}
+.fas{
+    color: #acb0b4;
+    font-size: 18px;
+    padding-right: 2px;
+}
+/****************************/
+.header-img {
+    width: 100%;
+}
+
+.city{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#contentContainer{
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#leftContainer{
+    /* border: 2px solid red; */
+    width: 55vw;
+}
+
+#rightContainer{
+    border: 1px solid #acb0b4;
+    width: 30vw;
+    padding: 20px;
+    height: 60%;
+}
+
+
+/********* Appartment details *********/
+
+#apt-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.host-details{
+    justify-content: right;
+    text-align: right;
+}
+.host-pic {
+    width: 100px;
+    border-radius: 500px;
+}
+
+.amenities, .house-rules, .cancellation{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.fake-heading{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.icons-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/********* Price box **********/
+
+.pricex2, .cleaning-fee, .breakfast-fee, .total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.pricetag{
+    text-align: right;
+}
+
