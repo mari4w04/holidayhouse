@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Holiday House</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <?php 
+      echo $sInjectCss ?? ''; 
+      echo $sHeaderLink ?? '';
+      ?>
     <script src="https://kit.fontawesome.com/3b2912fa62.js" crossorigin="anonymous"></script>
-    <?php echo $sInjectCss ?? ''; ?>
 </head>
 <body>
     <nav class="">
         <div class="nav-left">
             <a href="login"><img class="logo" src="images/logo.png"></a>
-            <a href="search"><img src="images/search.svg" class="small-icon">Search for dog sitters</a>
         </div>
         <div class="nav-right">
             <a class="nav-login" href="login">Log in</a>
