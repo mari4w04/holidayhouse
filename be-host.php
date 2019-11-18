@@ -15,18 +15,25 @@ require_once __DIR__.'/top.php';
     <form action="apis/api-be-host.php" method="POST"> 
         <div class="row home-type">
             <div class="post-titles">Home Type</div>
-            <div class="post-content">
-                <input type="text" name="" placeholder="Apartment">
-                <input type="text" name="" placeholder="House">
-                <input type="text" name="" placeholder="Condo">
-                <input type="text" name="" placeholder="Villa">
+            <div class="post-content tabs">
+                <?php 
+                    require_once __DIR__.'/connect.php';
+                    $stmt = $db->prepare('SELECT * FROM house_types');
+                    $stmt->execute();
+                    $aRows = $stmt->fetchAll();
+                    foreach ($aRows as $jRow) {
+                        echo '<div class="home-type-box">'.$jRow->house_type_name.'</div>';
+                    }
+                ?>
             </div>
+
+            
         </div>
         <div class="row">
             <div class="post-titles">Accommodates</div>
             <div class="col-2">
                 <div class="select-css">
-                    <select name="txtAccommodates">
+                    <select id="accommodates" name="txtAccommodates">
                         <option value="accommodates1">1</option>
                         <option value="accommodates2">2</option>
                         <option value="accommodates3">3</option>
@@ -37,7 +44,7 @@ require_once __DIR__.'/top.php';
                     <div class="checkbox">
                         <div class="checkbox-title">Family Friendly</div>
                         <label class="checkbox-label">
-                            <input type="checkbox">
+                            <input id="family-friendly" type="checkbox">
                             <span class="checkbox-custom rectangular"></span>
                         </label>
                     </div>
@@ -55,9 +62,9 @@ require_once __DIR__.'/top.php';
                         $aRows = $stmt->fetchAll();
                         foreach ($aRows as $jRow) {
                             echo '<div class="checkbox">
-                                    <div class="checkbox-title">'.$jRow->amenity_name.'</div>
+                                    <div class="checkbox-title amenity-item ">'.$jRow->amenity_name.'</div>
                                     <label class="checkbox-label">
-                                        <input type="checkbox">
+                                        <input id="amenity'.$jRow->id.'" type="checkbox">
                                         <span class="checkbox-custom rectangular"></span>
                                     </label>
                                 </div>';
@@ -68,7 +75,7 @@ require_once __DIR__.'/top.php';
         <div class="row">
             <div class="post-titles">Cancellation</div>
             <div class="select-css">
-            <select name="txtCancellation">
+            <select id="cancellation" name="txtCancellation">
                 <?php 
                     require_once __DIR__.'/connect.php';
                     $stmt = $db->prepare('SELECT * FROM cancellation_descriptions');
@@ -112,13 +119,14 @@ require_once __DIR__.'/top.php';
             </div>
         </div>       
             <div class="row">
-                <button class="btn post-content">Continue</button>
+                <button id="continue-to-receipt-btn" class="btn post-content">Continue</button>
             </div>
         </form>
     </div>
 </div>
 
 
-
 <?php
-require_once __DIR__.'/bottom.php'; 
+    $sLinktoScript = '<script type="text/javascript" src="js/be-host.js"></script><script type="text/javascript" src="js/localStorage.js"></script>'; 
+    require_once __DIR__.'/bottom.php'; 
+ ?>
