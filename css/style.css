@@ -281,7 +281,7 @@ select {
     position: absolute;
     opacity: 0;
     height: 24px;
-    /* width: 24px; */
+    width: 24px;
 }
 
 .checkbox-label .checkbox-custom {
