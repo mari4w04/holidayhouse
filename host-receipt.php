@@ -1,4 +1,6 @@
 <?php
+// session_start();
+// $sPostId = $_GET['sPostId'];
 
 $sInjectCss = '<link rel="stylesheet" href="css/index.css">';
   
@@ -7,6 +9,11 @@ require_once __DIR__.'/top.php';
 ?>
 
 <div class="page">
+    <div class="page-title"> 
+        <h2>Become a Host.</h2>
+        <h4>Rent your holiday home and earn money.</h4>
+    </div>
+  
     <form action="apis/api-be-host.php" method="POST"> 
         <div class="row home-type">
             <div class="post-titles">Home Type</div>
@@ -41,7 +48,19 @@ require_once __DIR__.'/top.php';
         <div class="row">
             <div class="post-titles">Cancellation</div>
             <div class="post-content">
-                7 day prior to visit
+            <?php 
+                require_once __DIR__.'/connect.php';
+                $stmt = $db->prepare('SELECT house_cancellation_fk, cancellation_description FROM houses_to_rent 
+                                    INNER JOIN cancellation_descriptions ON houses_to_rent.house_cancellation_fk = cancellation_descriptions.id
+                                    WHERE houses_to_rent.id=1');
+                $stmt->execute();
+                $aRows = $stmt->fetchAll();
+                foreach ($aRows as $jRow) {
+                    echo '<div class="checkbox">
+                            <div class="checkbox-title">'.$jRow->cancellation_description.'</div>
+                        </div>';
+                }
+            ?>
             </div>
         </div>     
         <div class="row">
@@ -66,6 +85,12 @@ require_once __DIR__.'/top.php';
                 450 DKK/night
             </div>
         </div>       
+            <div class="row-images">
+                    <img src="./images/house1.jpg" alt="">
+                    <img src="./images/house1.jpg" alt="">
+                    <img src="./images/house1.jpg" alt="">
+                    <img src="./images/house1.jpg" alt="">
+            </div>
             <div class="row">
                 <button class="btn post-content">Continue</button>
             </div>
@@ -73,6 +98,6 @@ require_once __DIR__.'/top.php';
     </div>
 </div>
 
-
 <?php
 require_once __DIR__.'/bottom.php'; 
+
