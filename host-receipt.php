@@ -9,25 +9,21 @@ require_once __DIR__.'/top.php';
 <div class="page">
     <form action="apis/api-be-host.php" method="POST"> 
         <div class="row home-type">
-            <h3 class="post-titles">Home Type</h3>
-                <div class="receipt-content">
-                    <p>Apartment</p>
+            <div class="post-titles">Home Type</div>
+                <div class="post-content">
+                    Apartment
                 </div>
         </div>
         <div class="row">
-            <h3 class="post-titles">Accommodates</h3>
-            <div class="post-content col-2">
-                <div class="receipt-content">
-                    <p>1 guest</p>
-                </div>
-                <div class="family-friendly">
-                    <div class="checkbox-title">Family Friendly</div>
-                </div>
+        <div class="post-titles">Accomodates</div>
+            <div class="post-content col-2">    
+                <div>1 guest</div>
+                <div>Family Friendly</div>
             </div>
         </div>
 
         <div class="row">
-            <h3 class="post-titles">Amenities</h3>
+            <div class="post-titles">Amenities</div>
             <div class="col-2 post-content">
                 <?php 
                         require_once __DIR__.'/connect.php';
@@ -43,13 +39,13 @@ require_once __DIR__.'/top.php';
             </div>
         </div> 
         <div class="row">
-            <h3 class="post-titles">Cancellation</h3>
-            <div>
-                <p>7 day prior to visit</p>
+            <div class="post-titles">Cancellation</div>
+            <div class="post-content">
+                7 day prior to visit
             </div>
         </div>     
         <div class="row">
-            <h3 class="post-titles">House Rules</h3>
+            <div class="post-titles">House Rules</div>
             <div class="col-2 post-content">
                 <?php 
                     require_once __DIR__.'/connect.php';
@@ -65,9 +61,9 @@ require_once __DIR__.'/top.php';
             </div>
         </div>  
         <div class="row">
-            <h3 class="post-titles">Price per night</h3>
+            <div class="post-titles">Price per night</div>
             <div class="post-content post-price">
-                <p>450 DKK/night</p>
+                450 DKK/night
             </div>
         </div>       
             <div class="row">

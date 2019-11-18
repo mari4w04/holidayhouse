@@ -10,7 +10,7 @@ require_once __DIR__.'/top.php';
 
 <form action="apis/api-be-host.php" method="POST"> 
     <div class="row home-type">
-        <h3 class="post-titles">Home Type</h3>
+        <div class="post-titles">Home Type</div>
         <div class="post-content">
             <input type="text" name="" placeholder="Apartment">
             <input type="text" name="" placeholder="House">
@@ -19,7 +19,7 @@ require_once __DIR__.'/top.php';
         </div>
     </div>
     <div class="row">
-        <h3 class="post-titles">Accommodates</h3>
+        <div class="post-titles">Accommodates</div>
         <div class="post-content col-2">
             <div class="select-css">
                 <select name="txtAccommodates">
@@ -40,7 +40,7 @@ require_once __DIR__.'/top.php';
     </div>
 
     <div class="row">
-        <h3 class="post-titles">Amenities</h3>
+        <div class="post-titles">Amenities</div>
         <div class="col-2 post-content">
             <?php 
                     require_once __DIR__.'/connect.php';
@@ -60,7 +60,7 @@ require_once __DIR__.'/top.php';
         </div>
     </div> 
     <div class="row">
-        <h3 class="post-titles">Cancellation</h3>
+        <div class="post-titles">Cancellation</div>
         <div class="select-css">
         <select name="txtCancellation">
             <?php 
@@ -76,7 +76,7 @@ require_once __DIR__.'/top.php';
         </div>
     </div>     
     <div class="row">
-        <h3 class="post-titles">House Rules</h3>
+        <div class="post-titles">House Rules</div>
         <div class="col-2 post-content">
             <?php 
                 require_once __DIR__.'/connect.php';
@@ -96,7 +96,7 @@ require_once __DIR__.'/top.php';
         </div>
     </div>  
     <div class="row">
-        <h3 class="post-titles">Price per night</h3>
+        <div class="post-titles">Price per night</div>
         <div class="post-content post-price">
             <label for="">400 DKK/night is a recommended price for your area</label>
                 <div class="price-input">
