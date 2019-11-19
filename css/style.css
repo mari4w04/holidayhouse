@@ -67,9 +67,14 @@ h1 {
     padding: 5% 10% 5% 10%;
 }
 
+.page h1{
+    font-size: 1.7em;
+    margin-block-start: 1.5em;
+}
+
 div.form-links {
-    margin-top: 5%;
-    padding-left: 5%;
+    padding-left: 8%;
+    margin-bottom: 2.5em;
 }
 
 a.link {
@@ -77,8 +82,9 @@ a.link {
     color: #c9c9c9;
     width: 100%;
     display: flex;
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
+
 
 .link span {
     color: #ff9100;
@@ -425,6 +431,23 @@ footer{
     background-color: #dadada;
     margin-top: 35px;
 }
-.test{
-    
+.right-panel{
+    background-image: url('../images/map.JPG');
+    background-size: cover;
+    margin-top: 35px;
+}
+#login, #signup{
+    width: 40vw;
+    margin: 0 auto;
+    font-size: .9em;
+}
+#login input[type="text"], #login input[type="password"], #signup input[type="text"], #signup input[type="password"]{
+    height: 2.5em;
+    padding: 0;
+}
+#signup input[type="text"], #signup input[type="password"]{
+    margin-bottom: 7%;
+}
+#login form, #signup form{
+    padding: 0 8% 0 8%;
 }
