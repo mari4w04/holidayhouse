@@ -17,72 +17,50 @@ require_once __DIR__.'/top.php';
     <form action="apis/api-be-host.php" method="POST"> 
         <div class="row home-type">
             <div class="post-titles">Home Type</div>
-                <div class="post-content">
-                    Apartment
+                <div id="home-type" class="post-content">
+                   
                 </div>
-        </div>
-        <div class="row">
-        <div class="post-titles">Accomodates</div>
-            <div class="post-content col-2">    
-                <div>1 guest</div>
-                <div>Family Friendly</div>
             </div>
-        </div>
+        <div class="row">
+            <div class="post-titles">Accomodates</div>
+                <div class="post-content col-2">    
+                    <div id="nr-guests">  </div>
+                    <div>Family Friendly</div>
+                </div>
+            </div>
 
         <div class="row">
             <div class="post-titles">Amenities</div>
             <div class="col-2 post-content">
-                <?php 
-                        require_once __DIR__.'/connect.php';
-                        $stmt = $db->prepare('SELECT * FROM amenities');
-                        $stmt->execute();
-                        $aRows = $stmt->fetchAll();
-                        foreach ($aRows as $jRow) {
-                            echo '<div class="checkbox">
-                                    <div class="checkbox-title">'.$jRow->amenity_name.'</div>
-                                </div>';
-                        }
-                    ?>
+                <div class="checkbox">
+                    <!-- <div id="amenity1" class="checkbox-title">Amenity 1</div> -->
+                    <!-- <div id="amenity2" class="checkbox-title">Amenity 2</div>
+                    <div id="amenity3" class="checkbox-title">Amenity 1</div> -->
+                </div>
             </div>
         </div> 
         <div class="row">
             <div class="post-titles">Cancellation</div>
             <div class="post-content">
-            <?php 
-                require_once __DIR__.'/connect.php';
-                $stmt = $db->prepare('SELECT house_cancellation_fk, cancellation_description FROM houses_to_rent 
-                                    INNER JOIN cancellation_descriptions ON houses_to_rent.house_cancellation_fk = cancellation_descriptions.id
-                                    WHERE houses_to_rent.id=1');
-                $stmt->execute();
-                $aRows = $stmt->fetchAll();
-                foreach ($aRows as $jRow) {
-                    echo '<div class="checkbox">
-                            <div class="checkbox-title">'.$jRow->cancellation_description.'</div>
-                        </div>';
-                }
-            ?>
+                <div class="checkbox">
+                    <div id="cancellation-type" class="checkbox-title"> </div>
+                </div>
             </div>
         </div>     
         <div class="row">
             <div class="post-titles">House Rules</div>
             <div class="col-2 post-content">
-                <?php 
-                    require_once __DIR__.'/connect.php';
-                    $stmt = $db->prepare('SELECT * FROM rules');
-                    $stmt->execute();
-                    $aRows = $stmt->fetchAll();
-                    foreach ($aRows as $jRow) {
-                        echo '<div class="checkbox">
-                                <div class="checkbox-title">'.$jRow->rule_name.'</div>
-                            </div>';
-                    }
-                ?>
+                <div class="checkbox">
+                    <!-- <div id="rule1" class="checkbox-title">Rule 1</div>
+                    <div id="rule2" class="checkbox-title">Rule 2</div>
+                    <div id="rule3" class="checkbox-title">Rule 3</div> -->
+                </div>
             </div>
         </div>  
         <div class="row">
             <div class="post-titles">Price per night</div>
-            <div class="post-content post-price">
-                450 DKK/night
+            <div id="post-price" class="post-content post-price">
+
             </div>
         </div>       
             <div class="row-images">
@@ -99,5 +77,6 @@ require_once __DIR__.'/top.php';
 </div>
 
 <?php
+$sLinktoScript = '<script type="text/javascript" src="js/hostReceipt.js"></script>'; 
 require_once __DIR__.'/bottom.php'; 
 

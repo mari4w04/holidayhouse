@@ -188,7 +188,7 @@ div.post-titles {
     color: white;
 }
 
-.home-type>.post-content {
+.home-type>.tabs {
     display: inline-flex;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
 }

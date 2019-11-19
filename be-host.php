@@ -1,6 +1,6 @@
 <?php
 
-$sInjectCss = '<link rel="stylesheet" href="css/index.css">';
+$sInjectCss = '<link rel="stylesheet" href="">';
   
 
 require_once __DIR__.'/top.php'; 
@@ -12,7 +12,7 @@ require_once __DIR__.'/top.php';
             <h4>Rent your holiday home and earn money.</h4>
     </div>
 
-    <form action="apis/api-be-host.php" method="POST"> 
+    <form action="" method="POST"> 
         <div class="row home-type">
             <div class="post-titles">Home Type</div>
             <div class="post-content tabs">
@@ -34,17 +34,17 @@ require_once __DIR__.'/top.php';
             <div class="col-2">
                 <div class="select-css">
                     <select id="accommodates" name="txtAccommodates">
-                        <option value="accommodates1">1</option>
-                        <option value="accommodates2">2</option>
-                        <option value="accommodates3">3</option>
-                        <option value="accommodatesMore">3+</option>
+                        <option value="accommodates1">1 guest</option>
+                        <option value="accommodates2">2 guests</option>
+                        <option value="accommodates3">3 guests</option>
+                        <option value="accommodatesMore">4 + guests</option>
                     </select>
                 </div>
                 <div class="family-friendly">
                     <div class="checkbox">
                         <div class="checkbox-title">Family Friendly</div>
                         <label class="checkbox-label">
-                            <input id="family-friendly" type="checkbox">
+                            <input value="Family Friendly" id="family-friendly" type="checkbox">
                             <span class="checkbox-custom rectangular"></span>
                         </label>
                     </div>
@@ -56,19 +56,19 @@ require_once __DIR__.'/top.php';
             <div class="post-titles">Amenities</div>
             <div class="col-2 post-content">
                 <?php 
-                        require_once __DIR__.'/connect.php';
-                        $stmt = $db->prepare('SELECT * FROM amenities');
-                        $stmt->execute();
-                        $aRows = $stmt->fetchAll();
-                        foreach ($aRows as $jRow) {
-                            echo '<div class="checkbox">
-                                    <div class="checkbox-title amenity-item ">'.$jRow->amenity_name.'</div>
-                                    <label class="checkbox-label">
-                                        <input id="amenity'.$jRow->id.'" type="checkbox">
-                                        <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                </div>';
-                        }
+                    require_once __DIR__.'/connect.php';
+                    $stmt = $db->prepare('SELECT * FROM amenities');
+                    $stmt->execute();
+                    $aRows = $stmt->fetchAll();
+                    foreach ($aRows as $jRow) {
+                        echo '<div class="checkbox">
+                                <div class="checkbox-title">'.$jRow->amenity_name.'</div>
+                                <label class="checkbox-label">
+                                    <input class="amenity-item" value="'.$jRow->amenity_name.'" id="amenity'.$jRow->id.'" type="checkbox">
+                                    <span class="checkbox-custom rectangular"></span>
+                                </label>
+                            </div>';
+                    }
                     ?>
             </div>
         </div> 
@@ -100,7 +100,7 @@ require_once __DIR__.'/top.php';
                         echo '<div class="checkbox">
                                 <div class="checkbox-title">'.$jRow->rule_name.'</div>
                                 <label class="checkbox-label">
-                                    <input type="checkbox">
+                                    <input value="'.$jRow->rule_name.'" id="rule'.$jRow->id.'" type="checkbox">
                                     <span class="checkbox-custom rectangular"></span>
                                 </label>
                             </div>';
@@ -127,6 +127,6 @@ require_once __DIR__.'/top.php';
 
 
 <?php
-    $sLinktoScript = '<script type="text/javascript" src="js/be-host.js"></script><script type="text/javascript" src="js/localStorage.js"></script>'; 
+    $sLinktoScript = '<script type="text/javascript" src="js/beHost.js"></script>'; 
     require_once __DIR__.'/bottom.php'; 
  ?>
