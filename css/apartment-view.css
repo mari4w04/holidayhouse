@@ -141,6 +141,9 @@ h2 {
 .page-title-profile h2 {
     text-align: left;
 }
+.title{
+    text-align:left;
+}
 
 .host-box {
     display: grid;
