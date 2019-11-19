@@ -1,48 +1,54 @@
-body{
+body {
     margin: 0;
 }
+
 .page {
     padding: 5% 5% 5% 5%;
 }
-hr{
-    background-color:#acb0b4;
+
+hr {
+    background-color: #acb0b4;
 }
+
 p {
     color: #4a525f;
     font-size: 13px;
 }
+
 h2 {
     font-weight: 500;
     font-size: 2em;
     color: #4a525f;
 }
-.fas{
+
+.fas {
     color: #acb0b4;
     font-size: 18px;
     padding-right: 2px;
 }
+
 /****************************/
 .header-img {
     width: 100%;
 }
 
-.city{
+.city {
     font-size: 20px;
     font-weight: 100;
 }
 
-#contentContainer{
+#contentContainer {
     width: 90vw;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-#leftContainer{
+#mainContainer {
     /* border: 2px solid red; */
     width: 55vw;
 }
 
-#rightContainer{
+#boxedContainer {
     border: 1px solid #acb0b4;
     width: 30vw;
     padding: 20px;
@@ -57,37 +63,114 @@ h2 {
     grid-template-columns: 2fr 1fr;
 }
 
-.host-details{
+.host-details-apartment {
     justify-content: right;
     text-align: right;
 }
+
 .host-pic {
     width: 100px;
     border-radius: 500px;
 }
 
-.amenities, .house-rules, .cancellation{
+.amenities,
+.house-rules,
+.cancellation {
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
-.fake-heading{
+.fake-heading {
     font-size: 18px;
     font-weight: 400;
 }
 
-.icons-grid{
+.icons-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 /********* Price box **********/
 
-.pricex2, .cleaning-fee, .breakfast-fee, .total{
+.pricex2,
+.cleaning-fee,
+.breakfast-fee,
+.total {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.pricetag{
+
+.pricetag {
     text-align: right;
 }
 
+/* Profile */
+.page-title-profile {
+    display: grid;
+}
+
+.page-title-profile h4,
+.page-title-profile h2 {
+    text-align: left;
+}
+
+.host-box {
+    display: grid;
+}
+
+.host-details {
+    justify-content: center;
+    text-align: center;
+}
+
+
+a.logout {
+    text-decoration: none;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0.7em;
+    padding: 0.7em;
+    display: inline-flex;
+    color: #ff9100;
+    border: 1px solid #ff9100;
+}
+
+#auth-details {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    border: 1px solid #acb0b4;
+    padding: 20px;
+}
+
+.contact-email,
+.contact-password {
+    display: grid;
+    width: 100%;
+}
+
+.contact-email {
+    border-bottom: #c9c9c9 1px solid;
+}
+
+.contact-email-label,
+.contact-password-label {
+    color: #a1a7b0;
+    text-align: left;
+}
+
+.contact-email-content,
+.contact-password-content {
+    font-size: 1.1em;
+}
+
+.edit-contact {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.edit-contact i {
+    color: #ff9100;
+}
