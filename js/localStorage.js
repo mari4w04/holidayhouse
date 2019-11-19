@@ -2,14 +2,11 @@ console.log('local storage here');
 console.log(localStorage.getItem('familyFriendly'));
 
 // OBJECT
-// console.log(localStorage.getItem('amenityChecked'));
-var retrievedObject = localStorage.getItem('amenityChecked');
+var retrievedObject = localStorage.getItem('amenityObject');
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
 // END OBJECT
 
 let isFamilyFriendly = document.getElementById('family-friendly').checked;
-// let amenityChecked = document.getElementById('amenity1').checked;
-// let iPriceNight = $('#iPriceNight').val();
 
 document.querySelector('#continue-to-receipt-btn').addEventListener('click', () => {
 	let cancellation = $('#cancellation option:selected').text();
@@ -17,8 +14,9 @@ document.querySelector('#continue-to-receipt-btn').addEventListener('click', () 
 	let iPriceNight = $('#iPriceNight').val();
 
 	// OJBECT
-	let amenityChecked = document.getElementById('amenity1').checked;
-	localStorage.setItem('amenity', JSON.stringify(amenityChecked));
+	let amenityObject = document.getElementsByClassName('amenity-item');
+	localStorage.setItem('amenity', JSON.stringify(amenityObject));
+	console.log(amenityObject);
 	// END OBJECT
 	localStorage.setItem('familyFriendly', isFamilyFriendly);
 	localStorage.setItem('cancellation', cancellation);

@@ -12,14 +12,14 @@
     
     <div id="contentContainer">
         
-        <div id="leftContainer">
+        <div id="mainContainer">
             <div id="apt-intro">
                 <div class="apt-intro-details">
                     <h2 class="title">Charming apartment</h2>
                     <p class="city"><i class="fas fa-map-marker-alt"></i> Copenhagen</p>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi et arcu pellentesque sollicitudin. Nullam sit amet vehicula enim, vitae pellentesque nulla. Sed sapien nulla, eleifend a ullamcorper eget, volutpat a lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras in rutrum diam.</p>
                 </div>
-                <div class="host-details">
+                <div class="host-details-apartment">
                     <img class="host-pic" src="./images/profilepic.jpg">
                     <p class="host-name">Birgitte Something</p>
                 </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div id="rightContainer">
+        <div id="boxedContainer">
             <div class="payment-box">
                 <div class="price">
                     <strong><p>DKK 1000 / night</p></strong>
