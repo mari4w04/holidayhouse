@@ -3,7 +3,11 @@
 try{
 
     $sUserName = 'root';
+<<<<<<< HEAD
     $sPassword = 'Pern2';
+=======
+    $sPassword = 'ilovepizza';
+>>>>>>> 220ab2f72be237e2f95a39f27e970e94e4422a75
     $sConnection = "mysql:host=localhost; dbname=holiday_house; charset=utf8mb4";
 
     $aOptions = array(

@@ -20,8 +20,9 @@ nav {
     display: inline-flex;
     justify-content: space-between;
     text-align: center;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #e6e6e6;
     align-items: center;
+    padding: 10px 10%;
 }
 
 img.logo {
@@ -334,7 +335,11 @@ select {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
+.small-container{
+    width: 65vw;
+    margin: 0 auto;
+    font-size: .9em;
+}
 .small-container input[type="text"],
 .small-container input[type="password"] {
     width: auto;
@@ -412,7 +417,30 @@ footer {
     width: 50px;
     margin: 0;
 }
+#searchForDate{
+    text-align: center;
+    padding: 1.5em 0 !important;
+    text-decoration: none;
+    font-weight: 400;
+    height: auto !important;
+}
 
+button, #searchForDate,
+input[type=submit] {
+    display: grid;
+    border-style: none;
+    background: #ff9100;
+    font-size: 0.9em;
+    height: 4em;
+    color: white;
+    margin-top: 5%;
+    width: 100%;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+}
 .search-box {
     display: flex;
     justify-content: space-evenly;
