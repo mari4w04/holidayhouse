@@ -48,7 +48,7 @@
     
     <div id="contentContainer">
         
-        <div id="leftContainer">
+        <div id="mainContainer">
             <div id="apt-intro">
                 <div class="apt-intro-details">
                     <h2 class="title"><?= $sHouseTitle ?></h2>
@@ -60,6 +60,7 @@
                         <img class="host-pic" src="./images/<?= $sUserPhotoUrl ?>">
                         <p class="host-name"><?= $sFullName ?></p>
                     </div>
+
                 </div>
             </div>
             <div class="long-grey-line"></div>
@@ -150,7 +151,7 @@
             </div>
         </div>
 
-        <div id="rightContainer">
+        <div id="boxedContainer">
             <div class="payment-box">
                 <div class="price">
                     <strong><p>DKK <span><?= $sHousePrice ?></span> / night</p></strong>

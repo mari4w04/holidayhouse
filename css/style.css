@@ -12,7 +12,6 @@ body {
     flex-direction: column;
     color: #3a3a3a;
     font-weight: 300;
-    margin: 0;
 }
 
 nav {
@@ -21,9 +20,8 @@ nav {
     display: inline-flex;
     justify-content: space-between;
     text-align: center;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #d9d9d9;
     align-items: center;
-    padding: 10px 10%;
 }
 
 img.logo {
@@ -54,13 +52,26 @@ a.nav-signup {
     border: 1px solid #ff9100;
 }
 
-h1 {
-    font-weight: 500;
-    font-size: 2em;
+h1,
+h4 {
     text-align: center;
     color: #4a525f;
 }
 
+h1 {
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+}
+
+h4 {
+    margin-top: -0.5em;
+    font-weight: 300;
+}
 
 
 .page {
@@ -121,21 +132,11 @@ input[type="password"] {
 
 label {
     color: #a1a7b0;
-    font-size: 0.8em;
     text-align: left;
-    margin-bottom: 0;
-    font-weight: 500;
+    padding-left: 0.5em;
 }
 
-#searchForDate{
-    text-align: center;
-    padding: 1.5em 0 !important;
-    text-decoration: none;
-    font-weight: 400;
-    height: auto !important;
-}
-
-button, #searchForDate,
+button,
 input[type=submit] {
     display: grid;
     border-style: none;
@@ -153,10 +154,10 @@ input[type=submit] {
 }
 
 footer {
-    padding: 1em;
+    padding: 2em;
     text-align: center;
     color: #cccccc;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid #cccccc;
     margin-bottom: 0;
 }
 
@@ -164,11 +165,14 @@ footer {
 
 .row {
     display: grid;
-    padding: 1em 0em 1em 0em;
+    padding: 1em 0em 3em 0em;
     grid-template-columns: 1fr 3fr;
     grid-template-areas: 'ttl cnt';
 }
 
+.row button {
+    width: 30%;
+}
 
 div.post-titles {
     grid-area: ttl;
@@ -184,18 +188,22 @@ div.post-titles {
     align-self: start;
 }
 
-
-.home-type>.post-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
+.tabs div.active {
+    background: #ff9100;
+    border: #ff9100 solid 1px;
+    color: white;
 }
 
-.home-type input {
+.home-type>.post-content {
+    display: inline-flex;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+div.home-type-box {
+    width: 100%;
     text-align: center;
     align-self: center;
-    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
-    padding: 2em 0em 2em 0em;
+    padding: 1.5em 0em 1.5em 0em;
     border: #cccccc solid 1px;
 }
 
@@ -205,16 +213,13 @@ div.post-titles {
 }
 
 .checkbox-title {
-    padding: 0em 0em 1.5em 2em;
-}
-
-div.family-friendly {
-    padding-left: 2em;
+    padding-bottom: 1.5em;
 }
 
 .price-input {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    padding-top: 0.5em;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -236,7 +241,8 @@ div.family-friendly {
 
 .select-css {
     border: #cccccc solid 1px;
-    margin: 1em 0em 1em 0em;
+    margin-right: 1.5em;
+    padding: 2em;
     display: flex;
     align-content: center;
     height: 70%;
@@ -255,15 +261,26 @@ select {
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     font-size: 1em;
-    margin: 1em;
+
 }
 
+.row-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* column-gap: 2%; */
+}
+
+.row-images>img {
+    width: 100%;
+    clip-path: inset(0% 5% 0% 5% round 10px);
+}
+
+/* Styling Checkbox */
 .checkbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-/* Styling Checkbox */
 .checkbox-label {
     display: block;
     position: relative;
@@ -286,28 +303,40 @@ select {
     border: 2px solid #cccccc;
 }
 
-.small-container{
-    width: 65vw;
-    margin: 0 auto;
-    font-size: .9em;
-}
+
 .checkbox-label input:checked~.checkbox-custom {
     background-color: #ff9100;
     opacity: 1;
     border: 2px solid #cccccc;
 }
-.location-box, .guest-box, .guest-box, .type-box, .date-in-box, .date-out-box, .family-friendly-box{
+
+.location-box,
+.guest-box,
+.guest-box,
+.type-box,
+.date-in-box,
+.date-out-box,
+.family-friendly-box {
     flex: 1;
     margin-left: 30px;
 }
-.location-box, .guest-box, .guest-box, .date-in-box, .date-out-box{
+
+.location-box,
+.guest-box,
+.guest-box,
+.date-in-box,
+.date-out-box {
     border-right: 1px solid #dadada;
 }
-.first-row, .second-row{
+
+.first-row,
+.second-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.small-container input[type="text"], .small-container input[type="password"]{
+
+.small-container input[type="text"],
+.small-container input[type="password"] {
     width: auto;
     margin: 0;
     display: inline;
@@ -315,36 +344,45 @@ select {
     font-size: 1em;
     padding: 0;
 }
-.small-container select{
+
+.small-container select {
     width: auto;
     margin: 0;
 
 }
-.second-row{
+
+.second-row {
     margin-top: 25px;
 }
-.first-row{
+
+.first-row {
     margin-bottom: 25px;
 }
-.line-row{
+
+.line-row {
     margin: 0 30px;
     height: 1px;
     background-color: #dadada;
 }
-.small-container form{
+
+.small-container form {
     padding: 5%;
 }
-.third-row{
+
+.third-row {
     padding: 0 30px;
 }
-.indexheading{
+
+.indexheading {
     margin: 5vw 0 3vw 0;
 }
-.footer-logo{
+
+.footer-logo {
     height: 40px;
     margin-right: 15px;
 }
-footer{
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,49 +390,66 @@ footer{
     margin-top: 30vw;
     padding: 1em 10%;
 }
-.search-row{
+
+.search-row {
     display: flex;
 }
-.left-panel form{
+
+.left-panel form {
     padding: 0;
     width: auto;
 }
-.left-panel{
+
+.left-panel {
     flex: 2;
 }
-.right-panel{
+
+.right-panel {
     flex: 1.5;
 }
-.searchbar #searchForDate{
+
+.searchbar #searchForDate {
     width: 50px;
     margin: 0;
 }
-.search-box{
+
+.search-box {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.searchbar input[type="text"], .searchbar input[type="password"]{
+
+.searchbar input[type="text"],
+.searchbar input[type="password"] {
     height: auto;
     width: auto;
     font-size: 1em;
     display: inline;
 }
-.searchbar .type-box{
+
+.searchbar .type-box {
     border-right: 1px solid #dadada;
 }
 
-.searchbar .location-box, .searchbar .guest-box, .searchbar .guest-box, .searchbar .type-box, .searchbar .date-in-box, .searchbar .date-out-box, .searchbar .family-friendly-box{
+.searchbar .location-box,
+.searchbar .guest-box,
+.searchbar .guest-box,
+.searchbar .type-box,
+.searchbar .date-in-box,
+.searchbar .date-out-box,
+.searchbar .family-friendly-box {
     margin: 0;
     padding: 0 10px;
     flex: none;
     border: none;
 }
-.searchbar select{
+
+.searchbar select {
     width: auto;
     margin: 5px 0;
 }
-.searchbar{
+
+.searchbar {
     display: grid;
     background-color: white;
     border: 1px solid #d9d9d9;
@@ -404,29 +459,35 @@ footer{
     width: 90vw;
     font-size: .8em;
 }
-.gray-line{
+
+.gray-line {
     width: 1px;
     background-color: #dadada;
     height: 45px;
 }
-.search-results{
+
+.search-results {
     width: 90vw;
     margin: 0 auto;
 }
-.search-results .white-card{
+
+.search-results .white-card {
     display: flex;
     margin-top: 35px;
 }
-.search-results img{
+
+.search-results img {
     height: 180px;
     margin-right: 25px;
 }
-.search-results a{
+
+.search-results a {
     text-decoration: none;
     color: black;
 }
-.long-grey-line{
-    height:1px;
+
+.long-grey-line {
+    height: 1px;
     width: 100%;
     background-color: #dadada;
     margin-top: 35px;
