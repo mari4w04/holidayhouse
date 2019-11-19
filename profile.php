@@ -42,28 +42,21 @@
                 </div>
                 <hr>
                 <div class="apt-details">
-                    <div class="amenities">
-                        <p class="fake-heading">Amenities</p>
-                        <div class="icons-grid">
-                            <p><i class="fas fa-wifi"></i> Wifi</p>
-                            <p><i class="fas fa-utensils"></i> Breakfast</p>
-                            <p><i class="fas fa-tv"></i> TV</p>
-                        </div>
+                <div class="" id="houseResults">
+                <div class='white-card'>
+                    <img src="images" alt=''>
+                    <div class='house-text'>
+                        <h5>Local Storage Title</h5>
+                        <span class='house-price'>local storage price kr./night</span>
                     </div>
-                    <hr>
-                    <div class="house-rules">
-                        <p class="fake-heading">House rules</p>
-                        <div class="icons-grid">
-                            <p><i class="fas fa-smoking-ban"></i> No smoking</p>
-                            <p><i class="fas fa-paw"></i> No pets</p>
-                            <p><i class="fas fa-glass-cheers"></i> No parties</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="cancellation">
-                        <p class="fake-heading">Cancellation</p>
-                        <p>Cancel up to 7 days prior to your stay</p>
-                    </div>
+                </div>
+                <div class='long-grey-line'>
+
+                </div>
+ 
+
+            </div>
+
                 </div>
             </div>
     </div>
