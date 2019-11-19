@@ -29,7 +29,9 @@ h2 {
 
 /****************************/
 .header-img {
+    object-fit: cover;
     width: 100%;
+    height: 400px;
 }
 
 .city {
@@ -48,11 +50,13 @@ h2 {
     width: 55vw;
 }
 
+#rightContainer{
+    /* border: 1px solid #acb0b4;
 #boxedContainer {
     border: 1px solid #acb0b4;
     width: 30vw;
     padding: 20px;
-    height: 60%;
+    height: 60%; */
 }
 
 
@@ -63,6 +67,16 @@ h2 {
     grid-template-columns: 2fr 1fr;
 }
 
+.host-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.host-details div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .host-details-apartment {
     justify-content: right;
     text-align: right;
@@ -103,7 +117,21 @@ h2 {
 .pricetag {
     text-align: right;
 }
-
+.payment-box{
+    border: 1px solid #dadada;
+    width: 30vw;
+    padding: 20px;
+    height: auto;
+}
+.payment-box .long-grey-line{
+    margin: 12px 0;
+}
+.fa-map-marker-alt{
+    margin-right: 10px;
+}
+.apartment-view-page p{
+    line-height: 1.6em;
+}
 /* Profile */
 .page-title-profile {
     display: grid;
