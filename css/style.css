@@ -540,3 +540,64 @@ input[type=submit] {
 #login form, #signup form{
     padding: 0 8% 0 8%;
 }
+
+
+
+/***** Post availability style ****/
+.container-avail {
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.2);
+    height: 13vh;
+}
+
+.input-avail {
+    border-bottom: none!important;
+}
+
+.add-more-box{
+    flex: 1;
+    margin-left: 30px;
+} 
+
+.fa-plus-square{
+    color: #ff9100;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.add-more-text{
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+}
+
+button, #continueTo, input[type=submit] {
+    display: grid;
+    border-style: none;
+    background: #ff9100;
+    font-size: 0.9em;
+    height: 4em;
+    color: white;
+    margin-top: 5%;
+    width: 60%;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+}
+#continueTo {
+    text-align: center;
+    padding: 1.5em 0 !important;
+    text-decoration: none;
+    font-weight: 400;
+    height: auto !important;
+}
