@@ -5,7 +5,6 @@
     }else{
         require_once __DIR__.'/top-logged-in.php'; 
     }
-
 ?>
 
 <h1 class="indexheading">Find your holiday home</h1>

@@ -46,6 +46,7 @@
         $sUserPhotoUrl = $aRow->photo_url;
     }
 
+
 ?>
 
 <div class="img-slider">
