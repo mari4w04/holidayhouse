@@ -9,7 +9,7 @@ require_once __DIR__.'/top.php';
     <div class="page">
         <div class="container" id="signup">
             <h1>Sign up</h1>
-            <form action="apis/api-signup.php" method="POST"> 
+            <form id="frmSignup" method="POST"> 
                 <label for="">First Name</label>
                 <input id="txtSignupFirstName" name="txtSignupFirstName" type="text" data-type="name" size="20" value="">
                 <label for="">Last Name</label>
@@ -30,4 +30,5 @@ require_once __DIR__.'/top.php';
 
 
 <?php
+$sLinktoScript = '<script src="js/signup.js"></script>';
 require_once __DIR__.'/bottom.php'; 
