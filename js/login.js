@@ -13,7 +13,7 @@ $('#frmLogin').submit( function(){
             //     text: "You have logged in",
             //     icon: "success",
             // });
-            location.href = "profile?user="+jData.message
+            location.href = "index"
         }
         if(jData.status == 0){
             swal({

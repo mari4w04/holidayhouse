@@ -540,3 +540,9 @@ input[type=submit] {
 #login form, #signup form{
     padding: 0 8% 0 8%;
 }
+#frmSignup label, #frmLogin label{
+    padding-left: 0;
+}
+.search-box label{
+    padding: 0;
+}

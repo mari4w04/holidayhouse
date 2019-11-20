@@ -3,7 +3,15 @@
     $sHouseId = $_GET['houseid'] ?? '';
 
     $sInjectCss = '<link rel="stylesheet" href="./css/apartment-view.css">';
-    require_once 'top.php';
+
+    session_start();
+    if( !isset($_SESSION['sEmail']) ){
+        require_once __DIR__.'/top.php'; 
+    }else{
+        require_once __DIR__.'/top-logged-in.php'; 
+    }
+
+
 
     require_once 'connect.php';
     $stmt = $db->prepare( 'SELECT houses_to_rent.house_title, houses_to_rent.house_price, houses_to_rent.house_photo_url, houses_to_rent.house_description, cities.city_name, cancellation_descriptions.cancellation_description FROM houses_to_rent 

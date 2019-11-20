@@ -3,7 +3,12 @@
 $sInjectCss = '<link rel="stylesheet" href="css/index.css">';
   
 
-require_once __DIR__.'/top.php'; 
+session_start();
+if( !isset($_SESSION['sEmail']) ){
+    require_once __DIR__.'/top.php'; 
+}else{
+    require_once __DIR__.'/top-logged-in.php'; 
+}
 ?>
 
 <div class="page">

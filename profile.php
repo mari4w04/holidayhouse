@@ -1,6 +1,10 @@
 <?php 
     $sInjectCss = '<link rel="stylesheet" href="./css/apartment-view.css">';
-    require_once 'top.php';
+    session_start();
+    if( !isset($_SESSION['sEmail']) ){
+        header('Location: login.php');
+    }
+    require_once __DIR__.'/top-logged-in.php'; 
 
 ?>
 
