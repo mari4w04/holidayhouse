@@ -5,7 +5,7 @@
     $sDateIn = $_GET['datein'] ?? '';
     $sDateOut = $_GET['dateout'] ?? '';
     $sFamilyFriendly = $_GET['isfamilyfriendly'] ?? '';
-    $sUserEmail = 'a@a.com' ?? '';
+    // $sUserEmail = 'a@a.com' ?? '';
     $sHeaderLink = "<script> 
             window.sCity = '$sCity'
             window.iGuests = '$iGuests'
@@ -15,9 +15,15 @@
             window.sFamilyFriendly = '$sFamilyFriendly'
         </script>";
 
-    require_once 'top.php'; 
     require_once 'connect.php';
-    
+ 
+    session_start();
+    if( !isset($_SESSION['sEmail']) ){
+        require_once __DIR__.'/top.php'; 
+    }else{
+        require_once __DIR__.'/top-logged-in.php'; 
+    }
+
 
     
 ?>
@@ -111,8 +117,8 @@
                         $stmt = $db->prepare( 'SELECT houses_to_rent.house_title, houses_to_rent.house_price, houses_to_rent.house_photo_url, houses_to_rent.id
                             FROM houses_to_rent
                             INNER JOIN users ON houses_to_rent.user_fk = users.id 
-                            WHERE NOT users.email = :sUserEmail AND :sDateInShort BETWEEN available_start_date AND available_end_date' );
-                        $stmt->bindValue(':sUserEmail', $sUserEmail);
+                            WHERE :sDateInShort BETWEEN available_start_date AND available_end_date' );
+                        // $stmt->bindValue(':sUserEmail', $sUserEmail);
                         $stmt->bindValue(':sDateInShort', $sDateInShort);
                         $stmt->execute();
                         $aRows = $stmt->fetchAll();

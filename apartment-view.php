@@ -1,42 +1,51 @@
 <?php 
 
-$sHouseId = $_GET['houseid'] ?? '';
+    $sHouseId = $_GET['houseid'] ?? '';
 
-$sInjectCss = '<link rel="stylesheet" href="./css/apartment-view.css">';
-require_once 'top.php';
+    $sInjectCss = '<link rel="stylesheet" href="./css/apartment-view.css">';
 
-require_once 'connect.php';
-$stmt = $db->prepare( 'SELECT houses_to_rent.house_title, houses_to_rent.house_price, houses_to_rent.house_photo_url, houses_to_rent.house_description, cities.city_name, cancellation_descriptions.cancellation_description FROM houses_to_rent 
-    INNER JOIN cities ON houses_to_rent.house_city_fk = cities.id 
-    INNER JOIN cancellation_descriptions ON houses_to_rent.house_cancellation_fk = cancellation_descriptions.id 
-    WHERE houses_to_rent.id = :sHouseId' );
-$stmt->bindValue(':sHouseId', $sHouseId);
-$stmt->execute();
-$aRows = $stmt->fetchAll();
+    session_start();
+    if( !isset($_SESSION['sEmail']) ){
+        require_once __DIR__.'/top.php'; 
+    }else{
+        require_once __DIR__.'/top-logged-in.php'; 
+    }
 
 
-$aResults = array();
-foreach( $aRows as $aRow ){
-    $sHouseTitle = $aRow->house_title;
-    $sHousePrice = $aRow->house_price;
-    $sHousePhotoUrl = $aRow->house_photo_url;
-    $sCityName = $aRow->city_name;
-    $sHouseDescription = $aRow->house_description;
-    $sCancellationDescription = $aRow->cancellation_description;
-}
+
+    require_once 'connect.php';
+    $stmt = $db->prepare( 'SELECT houses_to_rent.house_title, houses_to_rent.house_price, houses_to_rent.house_photo_url, houses_to_rent.house_description, cities.city_name, cancellation_descriptions.cancellation_description FROM houses_to_rent 
+        INNER JOIN cities ON houses_to_rent.house_city_fk = cities.id 
+        INNER JOIN cancellation_descriptions ON houses_to_rent.house_cancellation_fk = cancellation_descriptions.id 
+        WHERE houses_to_rent.id = :sHouseId' );
+    $stmt->bindValue(':sHouseId', $sHouseId);
+    $stmt->execute();
+    $aRows = $stmt->fetchAll();
 
 
-$stmt2 = $db->prepare( 'SELECT users.first_name, users.last_name, users.photo_url FROM users
-    INNER JOIN houses_to_rent ON houses_to_rent.user_fk = users.id 
-    WHERE houses_to_rent.id = :sHouseId' );
-$stmt2->bindValue(':sHouseId', $sHouseId);
-$stmt2->execute();
-$aRows2 = $stmt2->fetchAll();
-$aResults2 = array();
-foreach( $aRows2 as $aRow ){
-    $sFullName = $aRow->first_name.' '.$aRow->last_name;
-    $sUserPhotoUrl = $aRow->photo_url;
-}
+    $aResults = array();
+    foreach( $aRows as $aRow ){
+        $sHouseTitle = $aRow->house_title;
+        $sHousePrice = $aRow->house_price;
+        $sHousePhotoUrl = $aRow->house_photo_url;
+        $sCityName = $aRow->city_name;
+        $sHouseDescription = $aRow->house_description;
+        $sCancellationDescription = $aRow->cancellation_description;
+    }
+
+
+    $stmt2 = $db->prepare( 'SELECT users.first_name, users.last_name, users.photo_url FROM users
+        INNER JOIN houses_to_rent ON houses_to_rent.user_fk = users.id 
+        WHERE houses_to_rent.id = :sHouseId' );
+    $stmt2->bindValue(':sHouseId', $sHouseId);
+    $stmt2->execute();
+    $aRows2 = $stmt2->fetchAll();
+    $aResults2 = array();
+    foreach( $aRows2 as $aRow ){
+        $sFullName = $aRow->first_name.' '.$aRow->last_name;
+        $sUserPhotoUrl = $aRow->photo_url;
+    }
+
 
 ?>
 

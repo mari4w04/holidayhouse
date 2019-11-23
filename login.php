@@ -1,9 +1,16 @@
 <?php
 
-$sInjectCss = '<link rel="stylesheet" href="css/index.css">';
-  
+    // $sUserEmail = $_SESSION['sEmail'];
 
-require_once __DIR__.'/top.php'; 
+    $sInjectCss = '<link rel="stylesheet" href="css/index.css">';
+
+    // session_start();
+    // if( !isset($_SESSION['sEmail']) ){
+        require_once __DIR__.'/top.php'; 
+    // }
+
+    // require_once __DIR__.'/top-logged-in.php'; 
+  
 ?>
 
 <div class="page">

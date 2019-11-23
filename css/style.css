@@ -541,6 +541,13 @@ input[type=submit] {
     padding: 0 8% 0 8%;
 }
 
+#frmSignup label, #frmLogin label{
+    padding-left: 0;
+}
+.search-box label{
+    padding: 0;
+}
+
 
 
 /***** Post availability style ****/
