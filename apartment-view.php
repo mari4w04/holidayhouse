@@ -34,7 +34,7 @@
     }
 
 
-    $stmt2 = $db->prepare( 'SELECT holiday_house_users.first_name, holiday_house_users.last_name, holiday_house_users.photo_url FROM holiday_house_users
+    $stmt2 = $db->prepare( 'SELECT users.first_name, users.last_name, users.photo_url FROM users
         INNER JOIN houses_to_rent ON houses_to_rent.user_fk = users.id 
         WHERE houses_to_rent.id = :sHouseId' );
     $stmt2->bindValue(':sHouseId', $sHouseId);
