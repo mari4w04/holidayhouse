@@ -17,7 +17,7 @@
     <div id="contentContainer">
         <div id="boxedContainer">
                 <div class="host-box">
-                    <div class="host-details">
+                    <div class="host-details-profile">
                         <img class="host-pic" src="./images/profilepic.jpg">
                         <p class="host-name">Birgitte</p>
                         <p class="host-last-name">Something</p>

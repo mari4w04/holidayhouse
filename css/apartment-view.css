@@ -50,7 +50,7 @@ h2 {
     width: 55vw;
 }
 
-#rightContainer{
+#rightContainer {
     /* border: 1px solid #acb0b4;
 #boxedContainer {
     border: 1px solid #acb0b4;
@@ -67,16 +67,18 @@ h2 {
     grid-template-columns: 2fr 1fr;
 }
 
-.host-details{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.host-details div{
+.host-details-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.host-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .host-details-apartment {
     justify-content: right;
     text-align: right;
@@ -117,21 +119,26 @@ h2 {
 .pricetag {
     text-align: right;
 }
-.payment-box{
+
+.payment-box {
     border: 1px solid #dadada;
     width: 30vw;
     padding: 20px;
     height: auto;
 }
-.payment-box .long-grey-line{
+
+.payment-box .long-grey-line {
     margin: 12px 0;
 }
-.fa-map-marker-alt{
+
+.fa-map-marker-alt {
     margin-right: 10px;
 }
-.apartment-view-page p{
+
+.apartment-view-page p {
     line-height: 1.6em;
 }
+
 /* Profile */
 .page-title-profile {
     display: grid;
@@ -141,8 +148,9 @@ h2 {
 .page-title-profile h2 {
     text-align: left;
 }
-.title{
-    text-align:left;
+
+.title {
+    text-align: left;
 }
 
 .host-box {
