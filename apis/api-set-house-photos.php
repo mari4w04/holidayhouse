@@ -41,7 +41,7 @@
       if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
           echo "The file ". $target_file . " has been uploaded.";
           require_once '../connect.php';
-          $stmt = $db->prepare("INSERT INTO `house_photos`(`house_fk`, `house_photo_url`) VALUES ('14', :housePhotoUrl)");
+          $stmt = $db->prepare("INSERT INTO house_photos(`house_fk`, `house_photo_url`) VALUES ('3', :housePhotoUrl)");
           
           $stmt->bindValue(':housePhotoUrl', $target_file);
           // $stmt->bindValue(':sUserEmail', $sUserEmail);

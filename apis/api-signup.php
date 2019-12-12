@@ -31,7 +31,7 @@ $defaultPhoto = 'empty.jpg';
 
 // sql command
 require_once __DIR__.'/../connect.php';
-$stmt = $db->prepare('INSERT INTO holiday_house_users (first_name, last_name, email, password, photo_url) VALUES (:signupFirstName, :signupLastName, :signupEmail, :sUserPasswordHashed, :sPhotoUrl)');
+$stmt = $db->prepare('INSERT INTO users (first_name, last_name, email, password, photo_url) VALUES (:signupFirstName, :signupLastName, :signupEmail, :sUserPasswordHashed, :sPhotoUrl)');
 $stmt->bindValue(':signupFirstName', $sFirstName);
 $stmt->bindValue(':signupLastName', $sLastName);
 $stmt->bindValue(':signupEmail', $sEmail);
