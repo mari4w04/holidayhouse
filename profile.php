@@ -8,10 +8,6 @@
 
 ?>
 
-<div class="img-slider">
-    <img class="header-img" src="./images/house2.jpg">
-</div>
-
 <div class="page">
     
     <div id="contentContainer">
