@@ -32,3 +32,4 @@ if(localStorage.getItem('ruleNoPets')) {
 if(localStorage.getItem('ruleNoParties')) {
     document.getElementById("rule3").innerText = localStorage.getItem('ruleNoParties');
 }
+

@@ -15,8 +15,20 @@
                 <div class="host-box">
                     <div class="host-details-profile">
                         <img class="host-pic" src="./images/profilepic.jpg">
-                        <p class="host-name">Birgitte</p>
-                        <p class="host-last-name">Something</p>
+
+                        <?php 
+                            require_once __DIR__.'/connect.php';
+                            $stmt = $db->prepare('SELECT first_name, last_name FROM users WHERE email=:sUserEmail');
+                            $stmt->bindValue(':sUserEmail', $_SESSION['sEmail']);
+                            $stmt->execute();
+                            $aRows = $stmt->fetchAll();
+                            foreach ($aRows as $jRow) {
+                                echo '<div class="checkbox">
+                                        <p class="host-name">'.$jRow->first_name.'</p>
+                                        <p class="host-last-name">'.$jRow->last_name.'</p>                                
+                                </div>';
+                            }
+                        ?>
             </div>
 
             <div id="mainContainer">
@@ -28,7 +40,9 @@
                 <div id="auth-details">
                     <div class="contact-email">
                         <p class="contact-email-label">Email</p>  
-                        <p class="contact-email-content">Brigitte Something</p>  
+                        <p class="contact-email-content">
+                            <?php echo $_SESSION['sEmail']?>
+                        </p>  
                     </div>
                     <div class="edit-contact"><i class="fas fa-chevron-right"></i></div>
                     <div class="contact-password">
@@ -37,18 +51,29 @@
                     </div>
                     <div class="edit-contact"><i class="fas fa-chevron-right"></i></div>
                 </div>
-                <hr>
-                <div class="apt-details">
-                <div class="" id="houseResults">
-                <div class='white-card'>
-                    <img src="images" alt=''>
-                    <div class='house-text'>
-                        <h5>Local Storage Title</h5>
-                        <span class='house-price'>local storage price kr./night</span>
-                    </div>
-                </div>
-                <div class='long-grey-line'>
+                <div class='long-grey-line'></div>
+                <div class="apt-details">   
+                    <h5>Listed Properties</h5>    
+                    <div class="white-card">           
+                        <div class="apt-details-image-container">
+                            <img src="holidayhouse/<?php
+                                    require_once __DIR__.'/connect.php';
+                                    $stmt = $db->prepare('SELECT `house_photo_url` from `house_photos` ORDER BY `house_fk` DESC LIMIT 1');
+                                    $stmt->execute();
+                                    $aRows = $stmt->fetchAll();
+                                    foreach ($aRows as $jRow) {
+                                        echo $jRow->house_photo_url;
+                                    }
+                                ?>" 
+                            alt="" class="house-img"/>
+                        </div>
 
+                        <div class='house-text apt-details-text-container'>
+                            <h5 class="house-title"></h5>
+                            <p><span class='house-price'></span> DKK</p>
+                        </div>
+                    </div>
+                    <div class='long-grey-line'></div>
                 </div>
  
 
@@ -62,6 +87,6 @@
 
 
 <?php 
-    $sLinktoScript = '<script src="js/index.js"></script>';
+    $sLinktoScript = '<script src="js/index.js"></script><script src="js/profilePage.js"></script>';
     require_once 'bottom.php'; 
 ?>

@@ -214,3 +214,16 @@ a.logout {
 .edit-contact i {
     color: #ff9100;
 }
+
+/* PROFILE */
+
+.white-card {
+    display: flex;
+    margin-top: 35px;
+}
+
+.apt-details-image-container img {
+    height: 180px;
+    margin-right: 25px;
+}
+

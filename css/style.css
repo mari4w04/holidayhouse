@@ -677,3 +677,8 @@ button, #continueTo, input[type=submit] {
     display: flex;
     align-items: center;
 }
+
+/***** Profile style ****/
+.apt-details-flex {
+    display: flex;
+}

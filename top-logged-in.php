@@ -20,6 +20,8 @@
             <a href="index"><img class="logo" src="images/logo.png"></a>
         </div>
         <div class="right-nav">
+            <a href="search">Explore housing</a>
+            <a class="nav-become-host" href="be-host">Become a Host</a>
             <a href="<?php echo $sProfileLink ?? 'profile'; ?>">Profile</a>
             <a href="logout">Logout</a>
         </div>
