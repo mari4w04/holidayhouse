@@ -5,7 +5,12 @@
 $sInjectCss = '<link rel="stylesheet" href="css/index.css">';
   
 
-require_once __DIR__.'/top.php'; 
+session_start();
+if( !isset($_SESSION['sEmail']) ){
+    require_once __DIR__.'/top.php'; 
+}else{
+    require_once __DIR__.'/top-logged-in.php'; 
+}
 ?>
 
 <div class="page">
@@ -33,9 +38,9 @@ require_once __DIR__.'/top.php';
             <div class="post-titles">Amenities</div>
             <div class="col-2 post-content">
                 <div class="checkbox">
-                    <!-- <div id="amenity1" class="checkbox-title">Amenity 1</div> -->
-                    <!-- <div id="amenity2" class="checkbox-title">Amenity 2</div>
-                    <div id="amenity3" class="checkbox-title">Amenity 1</div> -->
+                    <div id="amenity1" class="checkbox-title"></div>
+                    <div id="amenity2" class="checkbox-title"></div>
+                    <div id="amenity3" class="checkbox-title"></div>
                 </div>
             </div>
         </div> 
@@ -51,9 +56,9 @@ require_once __DIR__.'/top.php';
             <div class="post-titles">House Rules</div>
             <div class="col-2 post-content">
                 <div class="checkbox">
-                    <!-- <div id="rule1" class="checkbox-title">Rule 1</div>
-                    <div id="rule2" class="checkbox-title">Rule 2</div>
-                    <div id="rule3" class="checkbox-title">Rule 3</div> -->
+                    <div id="rule1" class="checkbox-title"></div>
+                    <div id="rule2" class="checkbox-title"></div>
+                    <div id="rule3" class="checkbox-title"></div>
                 </div>
             </div>
         </div>  

@@ -78,7 +78,7 @@ $(function() {
 })
 
 
-d = new Date(parseInt(sDateIn));
+d = new Date(parseInt(mydateIn));
 dout = new Date(parseInt(sDateOut));
 
 

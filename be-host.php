@@ -3,7 +3,12 @@
 $sInjectCss = '<link rel="stylesheet" href="">';
   
 
-require_once __DIR__.'/top.php'; 
+session_start();
+if( !isset($_SESSION['sEmail']) ){
+    require_once __DIR__.'/top.php'; 
+}else{
+    require_once __DIR__.'/top-logged-in.php'; 
+}
 ?>
 
 <div class="page">
@@ -44,7 +49,7 @@ require_once __DIR__.'/top.php';
                     <div class="checkbox">
                         <div class="checkbox-title">Family Friendly</div>
                         <label class="checkbox-label">
-                            <input value="Family Friendly" id="family-friendly" type="checkbox">
+                            <input value="Family Friendly" id="family-friendly-input" type="checkbox">
                             <span class="checkbox-custom rectangular"></span>
                         </label>
                     </div>
@@ -54,7 +59,7 @@ require_once __DIR__.'/top.php';
 
         <div class="row">
             <div class="post-titles">Amenities</div>
-            <div class="col-2 post-content">
+            <div class="col-2 post-content amenities-content">
                 <?php 
                     require_once __DIR__.'/connect.php';
                     $stmt = $db->prepare('SELECT * FROM amenities');
@@ -90,7 +95,7 @@ require_once __DIR__.'/top.php';
         </div>     
         <div class="row">
             <div class="post-titles">House Rules</div>
-            <div class="col-2 post-content">
+            <div class="col-2 post-content house-rules">
                 <?php 
                     require_once __DIR__.'/connect.php';
                     $stmt = $db->prepare('SELECT * FROM rules');
