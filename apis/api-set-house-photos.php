@@ -15,6 +15,7 @@
           sendResponse(0, __LINE__, 'File is NOT an image');
           $uploadOk = 0;
       }
+      
   }
 
   // Check if file already exists

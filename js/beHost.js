@@ -14,11 +14,13 @@ document.querySelector('#continue-to-receipt-btn').addEventListener('click', (e)
 	let cancellation = $('#cancellation option:selected').text();
 	let accommodates = $('#accommodates option:selected').text();
 	let iPriceNight = $('#iPriceNight').val();
+	let houseTitle = $('#sHouseTitle').val();
 
 	localStorage.setItem('cancellation', cancellation);
 	localStorage.setItem('accommodates', accommodates);
 	localStorage.setItem('iPriceNight', iPriceNight);
 	localStorage.setItem('houseType', houseType);
+	localStorage.setItem('houseTitle', houseTitle);
 
 	isFamilyFriendly = $('#family-friendly-input').val();
 	if (document.querySelector("#family-friendly-input").checked) {

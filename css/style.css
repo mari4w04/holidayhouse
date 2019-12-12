@@ -217,6 +217,18 @@ div.home-type-box {
     padding-bottom: 1.5em;
 }
 
+.title-input {
+    padding-top: 0.5em;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);   
+}
+
+.title-input input {
+    border-top: #cccccc solid 1px;
+    border-left: #cccccc solid 1px;
+    margin-bottom: 0;
+    padding: 1em;
+}
+
 .price-input {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -657,4 +669,11 @@ button, #continueTo, input[type=submit] {
 
 #reserve-btn-link {
     text-decoration: none !important;
+}
+
+
+/***** Post pictures style ****/
+#frmUploadHousePhotos .home-type {
+    display: flex;
+    align-items: center;
 }
