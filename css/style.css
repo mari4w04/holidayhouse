@@ -630,3 +630,7 @@ button, #continueTo, input[type=submit] {
     font-weight: 400;
     height: auto !important;
 }
+
+#reserve-btn-link {
+    text-decoration: none !important;
+}

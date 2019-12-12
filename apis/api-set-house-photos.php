@@ -52,6 +52,9 @@
       }
   }
 
+  header("Location: ../host-receipt.php");
+
+
 
 
 

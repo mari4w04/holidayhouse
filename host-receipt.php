@@ -38,9 +38,9 @@ if( !isset($_SESSION['sEmail']) ){
             <div class="post-titles">Amenities</div>
             <div class="col-2 post-content">
                 <div class="checkbox">
-                    <!-- <div id="amenity1" class="checkbox-title">Amenity 1</div> -->
-                    <!-- <div id="amenity2" class="checkbox-title">Amenity 2</div>
-                    <div id="amenity3" class="checkbox-title">Amenity 1</div> -->
+                    <div id="amenity1" class="checkbox-title"></div>
+                    <div id="amenity2" class="checkbox-title"></div>
+                    <div id="amenity3" class="checkbox-title"></div>
                 </div>
             </div>
         </div> 
@@ -56,9 +56,9 @@ if( !isset($_SESSION['sEmail']) ){
             <div class="post-titles">House Rules</div>
             <div class="col-2 post-content">
                 <div class="checkbox">
-                    <!-- <div id="rule1" class="checkbox-title">Rule 1</div>
-                    <div id="rule2" class="checkbox-title">Rule 2</div>
-                    <div id="rule3" class="checkbox-title">Rule 3</div> -->
+                    <div id="rule1" class="checkbox-title"></div>
+                    <div id="rule2" class="checkbox-title"></div>
+                    <div id="rule3" class="checkbox-title"></div>
                 </div>
             </div>
         </div>  
