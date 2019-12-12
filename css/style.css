@@ -634,3 +634,10 @@ button, #continueTo, input[type=submit] {
 #reserve-btn-link {
     text-decoration: none !important;
 }
+
+
+/***** Post pictures style ****/
+#frmUploadHousePhotos .home-type {
+    display: flex;
+    align-items: center;
+}
