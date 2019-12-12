@@ -42,7 +42,6 @@ h2 {
 #contentContainer {
     width: 90vw;
     display: grid;
-    grid-template-columns: 2fr 1fr;
 }
 
 #mainContainer {
@@ -77,6 +76,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
+    text-align: center;
 }
 
 .host-details-apartment {
@@ -155,11 +156,7 @@ h2 {
 
 .host-box {
     display: grid;
-}
-
-.host-details {
-    justify-content: center;
-    text-align: center;
+    grid-template-columns: 2fr 1fr;
 }
 
 
