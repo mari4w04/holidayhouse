@@ -18,6 +18,15 @@ if( !isset($_SESSION['sEmail']) ){
     </div>
 
     <form action="" method="POST"> 
+        <div class="row">
+            <div class="post-titles">House Title</div>
+                <div class="post-content">
+                    <!-- <label for="">400 DKK/night is a recommended price for your area</label> -->
+                    <div class="title-input">
+                        <input id="sHouseTitle" name="txtHouseTitle" type="text" placeholder="" value="">
+                    </div>
+            </div>
+        </div> 
         <div class="row home-type">
             <div class="post-titles">Home Type</div>
             <div class="post-content tabs">
