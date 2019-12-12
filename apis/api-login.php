@@ -11,7 +11,7 @@ if( strlen($sUserPassword) < 3 ){ sendResponse(0, __LINE__, "password should be 
 if( strlen($sUserPassword) > 50 ){ sendResponse(0, __LINE__, "password should be less than 50 characters"); }
 
 require_once __DIR__.'/../connect.php';
-$stmt = $db->prepare('SELECT * FROM holiday_house_users WHERE email = :loggedEmail');
+$stmt = $db->prepare('SELECT * FROM users WHERE email = :loggedEmail');
 $stmt->bindValue(':loggedEmail', $sEmail);
 $stmt->execute(); // Check if this works
 $aRows = $stmt->fetchAll();
