@@ -79,7 +79,7 @@ h4 {
     padding: 5% 10% 5% 10%;
 }
 
-.page h1{
+.page h1 {
     font-size: 1.7em;
     margin-block-start: 1.5em;
 }
@@ -219,7 +219,7 @@ div.home-type-box {
 
 .title-input {
     padding-top: 0.5em;
-    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);   
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .title-input input {
@@ -347,11 +347,13 @@ select {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.small-container{
+
+.small-container {
     width: 65vw;
     margin: 0 auto;
     font-size: .9em;
 }
+
 .small-container input[type="text"],
 .small-container input[type="password"] {
     width: auto;
@@ -429,7 +431,8 @@ footer {
     width: 50px;
     margin: 0;
 }
-#searchForDate{
+
+#searchForDate {
     text-align: center;
     padding: 1.5em 0 !important;
     text-decoration: none;
@@ -437,7 +440,8 @@ footer {
     height: auto !important;
 }
 
-button, #searchForDate,
+button,
+#searchForDate,
 input[type=submit] {
     display: grid;
     border-style: none;
@@ -453,6 +457,7 @@ input[type=submit] {
     text-transform: uppercase;
     outline: none;
 }
+
 .search-box {
     display: flex;
     justify-content: space-evenly;
@@ -547,38 +552,51 @@ input[type=submit] {
 
 #preview-image-container img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
     background-color: lightgray;
 }
-.right-panel{
+
+.right-panel {
     background-image: url('../images/map.JPG');
     background-size: cover;
     margin-top: 35px;
 }
-#login, #signup{
+
+#login,
+#signup {
     width: 40vw;
     margin: 0 auto;
     font-size: .9em;
 }
-#login input[type="text"], #login input[type="password"], #signup input[type="text"], #signup input[type="password"]{
+
+#login input[type="text"],
+#login input[type="password"],
+#signup input[type="text"],
+#signup input[type="password"] {
     height: 2.5em;
     padding: 0;
 }
-#signup input[type="text"], #signup input[type="password"]{
+
+#signup input[type="text"],
+#signup input[type="password"] {
     margin-bottom: 7%;
 }
-#login form, #signup form{
+
+#login form,
+#signup form {
     padding: 0 8% 0 8%;
 }
 
-#frmSignup label, #frmLogin label{
+#frmSignup label,
+#frmLogin label {
     padding-left: 0;
 }
-.search-box label{
+
+.search-box label {
     padding: 0;
 }
 
@@ -595,32 +613,34 @@ input[type=submit] {
 }
 
 .input-avail {
-    border-bottom: none!important;
+    border-bottom: none !important;
 }
 
-.add-more-box{
+.add-more-box {
     flex: 1;
     margin-left: 30px;
-} 
+}
 
-.fa-plus-square{
+.fa-plus-square {
     color: #ff9100;
     font-size: 20px;
     padding-right: 10px;
 }
 
-.add-more-text{
+.add-more-text {
     align-items: center;
     align-content: center;
     display: flex;
 }
 
-.button-row{
+.button-row {
     display: flex;
     justify-content: center;
 }
 
-button, #continueTo, input[type=submit] {
+button,
+#continueTo,
+input[type=submit] {
     display: grid;
     border-style: none;
     background: #ff9100;
@@ -635,6 +655,7 @@ button, #continueTo, input[type=submit] {
     text-transform: uppercase;
     outline: none;
 }
+
 #continueTo {
     text-align: center;
     padding: 1.5em 0 !important;
@@ -642,25 +663,32 @@ button, #continueTo, input[type=submit] {
     font-weight: 400;
     height: auto !important;
 }
-.right-nav a{
+
+.right-nav a {
     font-weight: 500;
     text-decoration: none;
     color: #4a525f;
+    padding: 0em 1.2em 0em 1.2em;
 }
-.right-nav a:first-child{
-    margin-right: 20px;
+
+.right-nav a:first-child {
+    margin-left: 20px;
 }
-.reserve{
-    width: 100%;
-}
-.swal-button{
-    width: auto;
-}
-#login-btn, #signup-btn{
+
+.reserve {
     width: 100%;
 }
 
-#explore-housing{
+.swal-button {
+    width: auto;
+}
+
+#login-btn,
+#signup-btn {
+    width: 100%;
+}
+
+#explore-housing {
     font-weight: 500;
     text-decoration: none;
     color: #4a525f;
