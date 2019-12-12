@@ -11,7 +11,7 @@ $sUserEmail = $_GET['sUserEmail'] ?? '';
 
 $stmt = $db->prepare( 'SELECT houses_to_rent.house_title, houses_to_rent.house_price, houses_to_rent.house_photo_url, houses_to_rent.id
 FROM houses_to_rent
-INNER JOIN users ON houses_to_rent.user_fk = users.id 
+INNER JOIN holiday_house_users ON houses_to_rent.user_fk = users.id 
 WHERE :sSearchDate BETWEEN available_start_date AND available_end_date' );
 
 // $stmt->bindValue(':sSearchDate', $sSearchDate);
