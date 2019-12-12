@@ -1,10 +1,9 @@
 <?php
 
 try{
-
-    $sUserName = 'root';
-    $sPassword = '';
-    $sConnection = "mysql:host=localhost; dbname=holiday_house; charset=utf8mb4";
+    $sUserName = 'cocovo_co_uk_holidayhouse'; /* connect via username not root, they can destroy all databases */
+    $sPassword = 'devenv2020';
+    $sConnection = "mysql:host=cocovo.co.uk.mysql; dbname=cocovo_co_uk_holidayhouse; charset=utf8mb4";
 
     $aOptions = array(
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //throws the pdo exception, need to have it when using try catch for transactions
