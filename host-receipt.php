@@ -19,7 +19,7 @@ if( !isset($_SESSION['sEmail']) ){
         <h4>Rent your holiday home and earn money.</h4>
     </div>
   
-    <form action="apis/api-be-host.php" method="POST"> 
+    <form action="confirmation" method="POST"> 
         <div class="row home-type">
             <div class="post-titles">Home Type</div>
                 <div id="home-type" class="post-content">
@@ -74,8 +74,8 @@ if( !isset($_SESSION['sEmail']) ){
                     <img src="./images/house1.jpg" alt="">
                     <img src="./images/house1.jpg" alt="">
             </div>
-            <div class="row">
-                <button class="btn post-content">Continue</button>
+            <div class="row">     
+                    <button type="submit" class="btn post-content">Confirm</button>
             </div>
         </form>
     </div>
