@@ -49,7 +49,7 @@ if( !isset($_SESSION['sEmail']) ){
                     <div class="checkbox">
                         <div class="checkbox-title">Family Friendly</div>
                         <label class="checkbox-label">
-                            <input value="Family Friendly" id="family-friendly" type="checkbox">
+                            <input value="Family Friendly" id="family-friendly-input" type="checkbox">
                             <span class="checkbox-custom rectangular"></span>
                         </label>
                     </div>
@@ -59,7 +59,7 @@ if( !isset($_SESSION['sEmail']) ){
 
         <div class="row">
             <div class="post-titles">Amenities</div>
-            <div class="col-2 post-content">
+            <div class="col-2 post-content amenities-content">
                 <?php 
                     require_once __DIR__.'/connect.php';
                     $stmt = $db->prepare('SELECT * FROM amenities');
@@ -95,7 +95,7 @@ if( !isset($_SESSION['sEmail']) ){
         </div>     
         <div class="row">
             <div class="post-titles">House Rules</div>
-            <div class="col-2 post-content">
+            <div class="col-2 post-content house-rules">
                 <?php 
                     require_once __DIR__.'/connect.php';
                     $stmt = $db->prepare('SELECT * FROM rules');

@@ -520,6 +520,28 @@ input[type=submit] {
     background-color: #dadada;
     margin-top: 35px;
 }
+
+/* PHOTO PREVIEW */
+#house-photo-preview {
+    width: 100%;
+}
+
+#preview-image-container {
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+}
+
+#preview-image-container img {
+    width: 100%;
+    height: 100%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: lightgray;
+}
 .right-panel{
     background-image: url('../images/map.JPG');
     background-size: cover;
@@ -631,4 +653,8 @@ button, #continueTo, input[type=submit] {
     text-decoration: none;
     color: #4a525f;
     margin: 10px 15px 0 0;
+}
+
+#reserve-btn-link {
+    text-decoration: none !important;
 }
