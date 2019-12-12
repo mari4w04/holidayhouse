@@ -10,3 +10,12 @@ console.log(total)
 
 $('#pricetag span').text(x2NightsPrice);
 $('.total-price span').text(total);
+
+
+$('.reserve').click(()=>{
+    swal({
+        title: "Thank you for reserving!",
+        text: "Your confirmation number is "+Math.floor(Math.random() * 100001),
+        icon: "success",
+    });
+})
