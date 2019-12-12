@@ -69,7 +69,15 @@ if( !isset($_SESSION['sEmail']) ){
             </div>
         </div>       
             <div class="row-images">
-                    <img src="./images/house1.jpg" alt="">
+                    <img src="holidayhouse/<?php
+                        require_once __DIR__.'/connect.php';
+                        $stmt = $db->prepare('SELECT `house_photo_url` from `house_photos` ORDER BY `house_fk` DESC LIMIT 1');
+                        $stmt->execute();
+                        $aRows = $stmt->fetchAll();
+                        foreach ($aRows as $jRow) {
+                            echo $jRow->house_photo_url;
+                        }
+                    ?>" alt="" class="house-img"/>
                     <img src="./images/house1.jpg" alt="">
                     <img src="./images/house1.jpg" alt="">
                     <img src="./images/house1.jpg" alt="">
