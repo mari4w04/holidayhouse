@@ -20,7 +20,7 @@ require_once __DIR__.'/top.php';
                 <input id="txtSignupPassword" name="txtSignupPassword" type="password" data-type="password" minlength="3" maxlength="100" value="">
                 <label for="">Repeat Password</label>
                 <input id="txtConfirmPassword" name="txtConfirmPassword" type="password" data-type="password" minlength="3" maxlength="100" value="">
-                <button class="btn">Signup</button>
+                <button class="btn" id="signup-btn">Signup</button>
             </form>
             <div class="form-links">
                 <a class="link" href="login.php">Already have an account with us?<span>Login</span></a>

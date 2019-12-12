@@ -20,6 +20,7 @@
             <a href="index"><img class="logo" src="images/logo.png"></a>
         </div>
         <div class="nav-right">
+            <a href="search" id="explore-housing">Explore housing</a>
             <a class="nav-login" href="login">Log in</a>
             <a class="nav-signup" href="signup">Sign up</a>
       </div>
