@@ -21,9 +21,6 @@
                         <img class="host-pic" src="./images/profilepic.jpg">
                         <p class="host-name">Birgitte</p>
                         <p class="host-last-name">Something</p>
-                    </div>
-                    <a href="" class="logout">Logout</a>
-                </div>
             </div>
 
             <div id="mainContainer">
